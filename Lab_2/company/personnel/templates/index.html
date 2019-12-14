@@ -1,0 +1,22 @@
+{% extends "generic.html" %}
+
+
+{% block title %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/elements/button_bar_style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/index_style.css" %}" />
+    
+    <div class="title">
+        Кадры предприятия <br>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+    <div class="button_bar">
+        <a class="a-button" href="{% url 'employee' %}">Сотрудники</a>
+        <a class="a-button" href="{% url 'transfers' %}">История переводов</a>
+        <a class="a-button" href="{% url 'schedule' %}">Штатное расписание</a>
+        <a class="a-button" href="{% url 'search' %}">Поиск  по заданному критерию</a>
+    </div>
+{% endblock %}

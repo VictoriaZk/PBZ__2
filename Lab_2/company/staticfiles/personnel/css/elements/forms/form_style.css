@@ -1,0 +1,45 @@
+.form-wrapper {
+    padding: 10px 20px;
+}
+
+input {
+    padding: 5px;
+    width: 50%;
+    border: 0px;
+    border-radius: 7px;
+    box-shadow: none;
+    outline: none;
+}
+
+.errors {
+    color: white;
+    display: block;
+    margin: 0 15px;
+    color: rgb(211, 39, 39);
+}
+
+input:focus {
+    box-shadow: 0 0 0 1px goldenrod;
+}
+
+select {
+    padding: 5px;
+    margin: 0 5px 0 0;
+    background-color: rgb(2, 0, 36);
+    color: white;
+    border-width: 1px;
+    border-color: white;
+    border-radius: 7px;
+    box-shadow: none;
+    font-size: 100%;
+    outline: none;
+}
+
+select:focus {
+    border-color: goldenrod;
+}
+
+option {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,14 @@
+{% extends "generic.html" %}
+
+
+{% block title %}
+    {{ block.super }}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/elements/button_bar_style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/elements/button_bar_wrapped_style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/elements/table_style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/elements/forms/form_style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/elements/forms/form_line_style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/section_style.css" %}" />
+    <script type="text/javascript" src="{% static "personnel/scripts/js/a_submit.js" %}"></script>   
+{% endblock %}

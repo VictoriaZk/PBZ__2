@@ -1,0 +1,17 @@
+.column {
+    width: 25%;
+    margin: 5px;
+    background-color: rgba(2, 0, 36, 0.918);
+    border-radius: 7px;
+}
+
+.column-wrapper {
+justify-content: center;
+padding: 5px;
+width: 100% - 10px;
+text-align: center;
+}
+
+.button-bar-wrapper {
+    text-align: center;
+}

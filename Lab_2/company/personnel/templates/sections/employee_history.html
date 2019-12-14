@@ -1,0 +1,34 @@
+{% extends "section.html" %}
+
+{% block title %}
+    {{ block.super }}
+    {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static "personnel/css/sections/employee_history_style.css" %}" />
+{% endblock %}
+
+{% block content %}
+    <div class="full-name">
+        {{ employee.second_name }}
+        {{ employee.first_name }}
+        {{ employee.patronymic }}
+    </div>
+    <table>
+        <tr>
+            {% include "elements/table/history_table_title.html" %}
+        </tr>
+        {% for history_interval in table %}
+            <tr>
+                {% for field in history_interval %}
+                    <th>{{ field }}</th>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div class="button-bar-wrapper">
+        <div class="button_bar">
+            <a class="a-button" href="{% url 'employee' %}">Сотрудники</a>
+            <a class="a-button" href="{% url 'index' %}">На главную</a>
+        </div>
+    </div>
+{% endblock %}

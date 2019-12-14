@@ -1,0 +1,36 @@
+body {
+    background-color: #79aec8;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-y: 40%; 
+    width: 100%;
+    max-width: 100%;
+}
+
+#warning-text-wrapper {
+    position: relative
+}
+
+#warning-text {
+    font-size: 200%;
+    color: #bbccdd;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 50px;
+    text-align: center;
+}
+
+.button_bar {
+    margin: 0;
+    position: absolute;
+    top: 200%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%)
+}  
+
+.negative{
+    background-color:rgb(211, 39, 39);
+    box-shadow: 0 5px 0 rgb(146, 28, 28);
+}

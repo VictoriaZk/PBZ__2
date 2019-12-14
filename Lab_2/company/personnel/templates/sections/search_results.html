@@ -1,0 +1,24 @@
+{% extends 'section.html' %}
+
+{% block content %}
+<table>
+    <tr>
+        {% include "elements/table/search_result_title.html" %}
+    </tr>
+    {% for employee in table %}
+    <tr>
+        {% for field in employee %}
+        <th>{{ field }}</th>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+
+<div class="button-bar-wrapper">
+    <div class="button_bar">
+        <a class="a-button" href="{% url 'search' %}">К поиску</a>
+        <a class="a-button" href="{% url 'index' %}">На главную</a>
+    </div>
+</div>
+{% endblock %}

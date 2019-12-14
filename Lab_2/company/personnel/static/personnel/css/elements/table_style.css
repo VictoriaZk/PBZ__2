@@ -1,0 +1,79 @@
+table {
+    width: 100%;
+    font-size: 100%;
+    padding: 10px;
+}
+
+th {
+    border: 1px solid rgb(47, 104, 121);
+    color: white;
+    border-radius: 7px;
+}
+
+.table-title {
+    background-color: white;
+    color: rgb(46, 50, 139);
+}
+
+.button-cell {
+    background-color: rgb(68, 125, 159);
+    color: rgba(68, 125, 159, 0.98);
+    text-decoration: none;
+}
+
+.table-button {
+    color: rgb(68, 125, 159);
+}
+
+.field-wrapper *{
+    width: 100%;
+}
+
+#birth-date-wrapper * {
+    width: 33%;
+}
+
+#number {
+    width: 5%;
+}
+
+#second-name {
+    width: 15%;
+}
+
+#first-name {
+    width: 15%;
+}
+
+#patronymic {
+    width: 15%;
+}
+
+#sex{
+    width: 7%;
+}
+
+#birth-date {
+    width: 13%;
+}
+
+#marital_status{
+    width: 13%;
+}
+
+#history{
+    width: 5%;
+}
+
+#edit{
+    width: 5%;
+}
+
+#delete{
+    width: 5%;
+}
+
+.negative {
+    background-color:rgb(211, 39, 39);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}

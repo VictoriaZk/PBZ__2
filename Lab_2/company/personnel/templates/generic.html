@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+    <head>
+        <title>PBZ LAST</title>
+        <meta charset="utf-8">
+
+        {% load staticfiles %}
+        <script type="text/javascript" src="{% static "personnel/scripts/js/jquery-3.4.1.min.js" %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static "personnel/css/generic_style.css" %}" />
+        <link rel="shortcut icon" type="image/x-icon" href="{% static "favicon.ico" %}" />
+
+        {% block title %}{% endblock %}
+    </head>
+
+    <body>
+        {% block content %}{% endblock %}
+    </body>
+</html>

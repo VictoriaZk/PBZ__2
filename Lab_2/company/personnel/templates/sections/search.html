@@ -1,0 +1,35 @@
+{% extends 'section.html' %}
+
+
+{% block title %}
+{{ block.super }}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "personnel/css/sections/search_style.css" %}" />
+{% endblock %}
+
+{% block content %}
+<div class="column-wrapper">
+    <div class="column">
+        <div class="description">
+            Показать всех сотрудников
+            женского пола, достигших пенсионного возраста (55 лет) в текущем году.
+        </div>
+        <div class="button-bar-wrapper">
+            <div class="button_bar">
+                <a class="a-button positive" href="{% url 'retirement_search' %}">Искать</a>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <div class="description">
+            Показать всех сотрудников моложе указанного возраста, работающих на выбранной должности на предприятии.
+            <br><br>
+        </div>
+        <div class="button-bar-wrapper">
+            <div class="button_bar">
+                <a class="a-button positive" href="{% url 'age_search' %}">Искать</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

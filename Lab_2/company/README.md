@@ -1,0 +1,1 @@
+This is training project to study Django forms and work with postgres.

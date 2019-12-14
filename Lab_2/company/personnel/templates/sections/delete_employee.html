@@ -1,0 +1,24 @@
+{% extends "generic.html" %}
+
+
+{% block title %}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/generic_style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/elements/button_bar_style.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/sections/delete_employee_style.css" %}" />
+{% endblock %} 
+
+{% block content %}
+    <div id="warning-text-wrapper">
+        <div id="warning-text">
+            Вы действительно хотите удалить
+            <br/>
+            {{ employee }}?
+        </div>
+        <div class="button_bar">
+            <a class="a-button negative" href="{% url 'delete-employee-action' employee_id%}" >Удалить</a>
+            <a class="a-button" href="{% url 'employee' %}">Сотрудники</a>
+            <a class="a-button" href="{% url 'index' %}">На главную</a>
+        </div>
+    </div>
+{% endblock %} 

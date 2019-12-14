@@ -1,0 +1,33 @@
+.button_bar {
+    margin: 0 15px;
+}  
+
+.a-button {
+    background-color: goldenrod;
+    box-shadow: 0 5px 0 rgb(133, 101, 19);
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 7px;
+} 
+
+.a-button:hover {
+    background-color: rgb(2,0,36);
+}
+
+.a-button:active {
+    box-shadow: none;
+    top: 5px;
+}
+
+.positive {
+    background-color: rgb(69, 163, 26);
+    box-shadow: 0 5px 0 rgb(50, 116, 19);
+}
+
+.negative {
+    background-color:rgb(211, 39, 39);
+    box-shadow: 0 5px 0 rgb(146, 28, 28);
+}

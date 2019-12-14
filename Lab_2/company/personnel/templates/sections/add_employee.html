@@ -1,0 +1,52 @@
+{% extends "section.html" %}
+
+
+{% block title %}
+    {{ block.super }}
+    {% load staticfiles %}
+        <script type="text/javascript" src="{% static "personnel/scripts/js/a_submit.js" %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static "personnel/css/sections/add_employee_style.css" %}" />
+
+    {% if messages %}
+        {% for message in messages %}
+                <script>
+                    alert(message);
+                </script>
+        {% endfor %}
+    {% endif %}
+   
+{% endblock %} 
+
+
+{% block content %}
+    <form id="a-submit-form" action="{% url 'add-employee-action' %}" method="POST">
+        {% csrf_token %}
+        <div class="column-wrapper">
+            <div class="column">
+                <div class="form-wrapper">
+                    {% for field in personal_form.visible_fields %}
+                        {% include "elements/forms/form_line.html" %}
+                        <br>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="column">
+                <div class="form-wrapper">
+                    {% for field in history_form.visible_fields %}
+                        {% if field != history_form.end_date %}
+                            {% include "elements/forms/form_line.html" %}
+                        {% endif %}
+                        <br>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="button-bar-wrapper">
+            <div class="button_bar">
+                <a class="a-button positive" id="submit">Добавить</a>
+                <a class="a-button" href="{% url 'employee' %}">Сотрудники</a>
+                <a class="a-button" href="{% url 'index' %}">На главную</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}

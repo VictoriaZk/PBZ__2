@@ -1,0 +1,48 @@
+{% extends "section.html" %}
+
+
+{% block title %}
+    {{ block.super }}
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static "personnel/css/sections/employee_style.css" %}" />
+{% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th class="table-title" id="number">
+                №
+            </th>
+            {% include "elements/table/employee_table_title.html" %}
+        </tr>
+        {% for employee in table %}
+            <tr>
+                {% for field in employee %}
+                    <th>{{ field }}</th>
+                {% endfor %}
+                <th class="button-cell" id="edit">
+                    <a class="button-cell" href="{% url 'employee-history' employee.0 %}">
+                        <img alt="H" src="{% static "personnel/images/book.png" %}">
+                    </a>
+                </th>
+                <th class="button-cell" id="edit">
+                    <a class="button-cell" href="{% url 'edit-employee' employee.0 %}">
+                        <img alt="!" src="{% static "personnel/images/pen.png" %}">
+                    </a>
+                </th>
+                <th class="button-cell negative" id="delete">
+                    <a class="button-cell negative" href="{% url 'delete-employee' employee.0 %}">
+                        <img alt="-" src="{% static "personnel/images/cross.png" %}">
+                    </a>
+                </th>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div class="button-bar-wrapper">
+        <div class="button_bar">
+            <a class="a-button positive" href="{% url 'add-employee' %}">Добавить сотрудника</a>
+            <a class="a-button" href="{% url 'index' %}">На главную</a>
+        </div>
+    </div>
+{% endblock %}

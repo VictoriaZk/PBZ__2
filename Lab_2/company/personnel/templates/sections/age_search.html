@@ -1,0 +1,30 @@
+{% extends 'section.html' %}
+
+
+{% block title %}
+{{ block.super }}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static "personnel/css/sections/transfers_style.css" %}" />
+{% endblock %}
+
+{% block content %}
+<form id="a-submit-form" method="POST">
+    {% csrf_token %}
+    <div class="column-wrapper">
+        <div class="column">
+            <div class="form-wrapper">
+                {% for field in search_form.visible_fields %}
+                {% include "elements/forms/form_line.html" %}
+                <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="button-bar-wrapper">
+        <div class="button_bar">
+            <a class="a-button positive" id="submit">Искать</a>
+            <a class="a-button" href="{% url 'index' %}">На главную</a>
+        </div>
+    </div>
+</form>
+{% endblock %}

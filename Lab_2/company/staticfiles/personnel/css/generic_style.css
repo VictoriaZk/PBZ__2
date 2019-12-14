@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url('/static/personnel/images/zavod.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-y: 40%; 
+  width: 100%;
+  max-width: 100%;
+}
+
+html,
+.wrapper {
+	position: relative;
+	min-height: 100%;
+}
+
+.column {
+  width: 50%;
+  margin: 5px 40px;
+  background-color: rgba(2, 0, 36, 0.918);
+  border-radius: 7px;
+}
+
+.column-wrapper {
+  display: flex;
+  padding: 5px;
+  width: 100% - 10px;
+  text-align: center;
+}
+
+.caption {
+  color: goldenrod;
+  font-size: xx-large;
+  text-align: center;
+}

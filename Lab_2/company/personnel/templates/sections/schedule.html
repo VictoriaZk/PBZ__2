@@ -1,0 +1,23 @@
+{% extends 'section.html' %}
+
+
+{% block content %}
+<table>
+    <tr>
+        {% include "elements/table/schedule_table_title.html" %}
+    </tr>
+    {% for schedule in table %}
+    <tr>
+        {% for field in schedule %}
+        <th>{{ field }}</th>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+<div class="button-bar-wrapper">
+    <div class="button_bar">
+        <a class="a-button" href="{% url 'index' %}">На главную</a>
+    </div>
+</div>
+{% endblock %}

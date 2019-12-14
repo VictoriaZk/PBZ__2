@@ -1,0 +1,33 @@
+.button_bar {
+    margin: 0 15px;
+}  
+
+.a-button {
+    background-color: #bbccdd;
+    box-shadow: 0 5px 0 whitesmoke;
+    color: darkblue;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 12px;
+} 
+
+.a-button:hover {
+    background-color: cornflowerblue;
+}
+
+.a-button:active {
+    box-shadow: none;
+    top: 2px;
+}
+
+.positive {
+    background-color: #bbccdd;
+    box-shadow: 0 5px 0 whitesmoke;
+}
+
+.negative {
+    background-color:rgb(211, 39, 39);
+    box-shadow: 0 5px 0 rgb(146, 28, 28);
+}
